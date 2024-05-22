@@ -1,4 +1,4 @@
-# Local chat whith Podman AI
+# Local chat with Podman AI
 
 Chat UI for local offline Llama3 Model to chat with.
 
