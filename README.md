@@ -17,7 +17,8 @@ Chat UI for local offline Llama3 Model to chat with.
 
 ## Download Llama 3 model
 
-Downoad a model in Podman AI lab (see tab catalog). instructlab/granite-7b-lab-GGUF
+Downoad a model in Podman AI lab (see tab catalog). For example: instructlab/granite-7b-lab-GGUF
+
 Start the model as a service (see tab Services)
 
 Hint: In Service details check the local URL port used. If necessary, change it in gradio_app_v1.py in variable model_service.
@@ -35,13 +36,13 @@ In your terminal:
 
 ## Run the Gradio app
 
-  `python3 run gradio_app_v1.py`
+  `python3 gradio_app_v1.py`
 
 ## Create Shell alias
 
 Add into your `bashrc` or `zshrc` file:
 
-  `alias llama='cd ~/llama3_local; python3 run gradio_app_v1.py'`
+  `alias llama='cd ~/llama3_local; python3 gradio_app_v1.py'`
 
 NOTE: update the `cd ~/llama3_local` with the path, where you've saved this project.
 
