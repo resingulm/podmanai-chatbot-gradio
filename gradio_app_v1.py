@@ -12,7 +12,7 @@ from langchain.chains import LLMChain
 from langchain_core.prompts import ChatPromptTemplate
 
 
-model_service = "http://localhost:53829/v1/"
+model_service = "http://localhost:61988/v1/"
 
 llm = OpenAI(base_url=model_service, 
              api_key="sk-no-key-required",
@@ -47,5 +47,5 @@ def chatbot(input_value, history):
         yield full_response
     yield full_response
 
-iface = gr.ChatInterface(fn=chatbot, title="🦙💬 Chatbot using Llama3 via Podman AI")
+iface = gr.ChatInterface(fn=chatbot, title="💬 Chatbot via Podman AI")
 iface.launch(inbrowser=True)

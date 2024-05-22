@@ -1,6 +1,6 @@
 # Local chat with Podman AI
 
-Chat UI for local offline Llama3 Model to chat with.
+Chat UI for local offline Granite or Llama 3 Model.
 
 ## Architecture
 
@@ -12,12 +12,19 @@ Chat UI for local offline Llama3 Model to chat with.
 
 ## Prerequisites
 
-- Install Podmain AI lan - <https://podman-desktop.io/docs/ai-lab>
+- Install Podmain AI lab - <https://podman-desktop.io/docs/ai-lab>
 - Install Python 3
 
-## Download Llama 3 model
+## Download model
 
 Downoad a model in Podman AI lab (see tab catalog). For example: instructlab/granite-7b-lab-GGUF
+
+To use LLama3: Download LLama3 model from Huggingface. For example:
+<https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF>
+
+Import the model into Podman AI via the user interface.
+
+## Start Podman AI service
 
 Start the model as a service (see tab Services)
 
@@ -25,27 +32,40 @@ Hint: In Service details check the local URL port used. If necessary, change it 
 
 ## Crete and activate virtual environment
 
+```bash
 python3 venv -m venv
+```
+
+```bash
 python3 source venv/bin/activate
+```
 
 ## Install Python libraries
 
 In your terminal:
 
-  `pip3 install -r requirements.txt`
+  ```bash
+  pip3 install -r requirements.txt
+  ```
 
 ## Run the Gradio app
 
-  `python3 gradio_app_v1.py`
+  ```bash
+  python3 gradio_app_v1.py
+  ```
 
 ## Create Shell alias
 
 Add into your `bashrc` or `zshrc` file:
 
-  `alias llama='cd ~/llama3_local; python3 gradio_app_v1.py'`
+  ```bash
+  alias llama='cd ~/llama3_local; python3 gradio_app_v1.py'
+  ```
 
 NOTE: update the `cd ~/llama3_local` with the path, where you've saved this project.
 
 ## Run the shell alias to call it from any directory
 
-  `llama`
+  ```bash
+  llama
+  ```
