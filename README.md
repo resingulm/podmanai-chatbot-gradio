@@ -30,6 +30,8 @@ Start the model as a service (see tab Services)
 
 Hint: In Service details check the local URL port used. If necessary, change it in gradio_app_v1.py in variable model_service.
 
+![Alt text](service-details.png?raw=true "Service details")
+
 ## Crete and activate virtual environment
 
 ```bash
